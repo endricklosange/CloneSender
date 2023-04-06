@@ -6,7 +6,12 @@ class User {
   String email;
   String profileImageUrl;
 
-  User({this.id, this.username, this.email, this.profileImageUrl});
+  User({
+    required this.id,
+    required this.username,
+    required this.email,
+    required this.profileImageUrl
+  });
 
   // Convertir un User en map pour Firestore
   Map<String, dynamic> toMap() {
@@ -16,17 +21,6 @@ class User {
       'email': email,
       'profileImageUrl': profileImageUrl,
     };
-  }
-
-  // Créer une instance de User à partir d'un DocumentSnapshot Firestore
-  factory User.fromFirestore(DocumentSnapshot doc) {
-    Map data = doc.data();
-    return User(
-      id: data['id'],
-      username: data['username'],
-      email: data['email'],
-      profileImageUrl: data['profileImageUrl'],
-    );
   }
 }
 

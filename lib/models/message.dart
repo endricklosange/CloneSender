@@ -5,8 +5,15 @@ class Message {
   String receiverId;
   String content;
   DateTime timestamp;
+  bool unread;
 
-  Message({this.senderId, this.receiverId, this.content, this.timestamp});
+  Message({
+    required this.senderId,
+    required this.receiverId,
+    required this.content,
+    required this.timestamp,
+    required this.unread,
+  });
 
   // Convertir un Message en map pour Firestore
   Map<String, dynamic> toMap() {
@@ -15,18 +22,8 @@ class Message {
       'receiverId': receiverId,
       'content': content,
       'timestamp': timestamp,
+      'unread': unread,
     };
-  }
-
-  // Créer une instance de Message à partir d'un DocumentSnapshot Firestore
-  factory Message.fromFirestore(DocumentSnapshot doc) {
-    Map data = doc.data();
-    return Message(
-      senderId: data['senderId'],
-      receiverId: data['receiverId'],
-      content: data['content'],
-      timestamp: data['timestamp'].toDate(),
-    );
   }
 }
 
@@ -36,6 +33,6 @@ Future<void> sendMessage(String senderId, String receiverId, String content) asy
       FirebaseFirestore.instance.collection('messages');
   DateTime timestamp = DateTime.now();
   Message message = Message(
-      senderId: senderId, receiverId: receiverId, content: content, timestamp: timestamp);
+      senderId: senderId, receiverId: receiverId, content: content, timestamp: timestamp, unread: true);
   await messages.add(message.toMap());
 }
