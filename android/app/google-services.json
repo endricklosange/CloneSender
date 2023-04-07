@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "540766455702",
+    "project_id": "clonesender-afea3",
+    "storage_bucket": "clonesender-afea3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540766455702:android:32ed2877625885f870bfb7",
+        "android_client_info": {
+          "package_name": "com.example.message"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540766455702-sbra39e9nr5tunfepb4m66m8gciobfmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXcVwDjSIW-Sb8ZJGj2r9hgKiw6Cf5WXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540766455702-sbra39e9nr5tunfepb4m66m8gciobfmq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "540766455702-sks3vssiqe8s0di3usbgkjkk07cucvm1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.message"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
