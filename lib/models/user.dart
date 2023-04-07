@@ -9,10 +9,9 @@ class User {
   User(DocumentSnapshot snapshot){
     id = snapshot.id;
     Map<String,dynamic> map = snapshot.data()as Map<String,dynamic>;
-    username = map['USERNAME'];
-    email = map['EMAIL'];
-    profileImageUrl = map["AVATAR"] ?? "defaultImage";
-    Timestamp? timeprovisoire = map["BIRTHDAY"];
+    username = map['username'];
+    email = map['email'];
+    profileImageUrl = map["profileImageUrl"] ?? "defaultImage";
   }
 
   User.empty(){

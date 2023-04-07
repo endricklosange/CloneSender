@@ -47,16 +47,13 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: 
-          [
-            if (page == 0) const MessagePage(),
-            if (page == 1) const UsersPage(),
-            if (page == 2) const SettingsPage(),
-          ],
-        ),
+      body: Column(
+        children: 
+        [
+          if (page == 0) const MessagePage(),
+          if (page == 1) const UsersPage(),
+          if (page == 2) const SettingsPage(),
+        ],
       ),
 
       floatingActionButton: floatingActionButton(),
